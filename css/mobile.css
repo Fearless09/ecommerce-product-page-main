@@ -19,18 +19,20 @@
 
 .menu ul li {
     display: block;
+    width: 80%;
     padding: 20px 0px;
     margin: 10px;  
 }
 
-.menu a {
+.menu ul li a {
     color: hsl(0, 0%, 0%);
     padding: 20px 50px;
     font-size: 24px;
     font-weight: bold;  
+    
 }
 
-.menu a:hover {
+.menu ul li:hover, .menu ul li a:hover  {
     background-color: hsl(25, 100%, 94%);
     color: hsl(26, 100%, 55%);
 }
@@ -124,21 +126,23 @@
     }
 
     .increament {
+        display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         width: 100%;
+
     }
 
     .increament .inputbox {
-        width: 160px;
+        width: 30%;
         height: 50px;
         margin-top: 0px;
     }
     
     .increament button {
         height: 50px;
-        width: 100px;
+        width: 30%;
     }
 
 

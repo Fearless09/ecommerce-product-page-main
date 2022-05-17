@@ -86,7 +86,7 @@ header {
     background-color: hsl(26, 100%, 55%);
     color: hsl(25, 100%, 94%);
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     outline: none;
     text-align: center;
     font-size: 18px;
