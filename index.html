@@ -1,121 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>sneakers</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/homepage.css'>
-    <link rel="stylesheet" href="css/mobile.css">
-   
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/homepage.css'>
+
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <span class="menuspan" onclick="openmenu()">
-                <img src="images/icon-menu.svg" alt="">
-            </span>
-            <h1><a href="">sneakers</a></h1>
+        <div class="maxWidth">
+            <div class="logo">
+                <button class="menuBtn" aria-controls="menu" aria-expanded="false">
+                    <img src="./images/icon-menu.svg" class="menuOpen" alt="">
+
+                    <img src="./images/icon-close.svg" class="menuClose" alt="">
+                </button>
+
+                <h1>
+                    <a href="">sneakers</a>
+                </h1>
+            </div>
+
+            <div class="collections" id="menu">
+                <ul>
+                    <li><a href="">Collections</a></li>
+                    <li><a href="">Men</a></li>
+                    <li><a href="">Women</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="cartContainer">
+                <button class="cartBtn" aria-controls="cartbox" aria-expanded="false">
+                    <img src="./images/icon-cart.svg" alt="">
+
+                    <span class="cartspan">
+                        <input class="inputbox" type="text" name="" id="badge" readonly="">
+                    </span>
+                </button>
+
+
+
+                <img class="avatar" src="./images/image-avatar.png" alt="">
+
+
+            </div>
         </div>
 
-        <div class="collections">
-            <ul>
-                <li><a href="">Collections</a></li>
-                <li><a href="">Men</a></li>
-                <li><a href="">Women</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-
-        
-
-        <div>
-            <img class="cart" src="images/icon-cart.svg" alt="">
-            <span class="cartspan">
-                <input class="inputbox" type="text" name="" id="badge" readonly="">
-            </span>
-            
-            <span class="cartspan">
-                <input type="checkbox" class="toggler" onclick="opencart()">
-            </span>
-            
-            <img class="avatar" src="images/image-avatar.png" alt="">
-
-            
-        </div>
 
     </header>
-
-    <div style="margin-top: 10px;"></div>
-    
-
-    <div class="cls"></div>
-    <div style="margin-top: 50px;"></div>
-    <div class="container main">
-        <div class="images">
-            <div class="product-1">
-                <button class="previous", id="previous"></button>
-                <img class="mainImg" id="mainImg" src="images/image-product-1.jpg" alt="">
-                <button class="next", id="next"></button>
-            </div>
-
-            <ul class="thumbnail">
-                <li onclick="thumbchange(1)"><img src="images/image-product-1.jpg" alt=""></li>
-
-                <li onclick="thumbchange(2)"><img src="images/image-product-2.jpg" alt=""></li>
-
-                <li onclick="thumbchange(3)"><img src="images/image-product-3.jpg" alt=""></li>
-
-                <li onclick="thumbchange(4)"><img src="images/image-product-4.jpg" alt=""></li>
-            </ul>
-        </div>
-
-        <div class="images">
-            <div class="text">
-                <h3>SNEAKER COMPANY</h3>
-                <H1 class="fall">Fall Limited Edition Sneakers</H1>
-                <p>
-                    These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
-                </p>
-            
-
-                <div class="discount">
-                    <h2>$125.00</h2>
-                    <h4 class="fifty">50%</h4>
-                </div>
-                <p class="two">$250.00</p>
-
-                <div class="cls"></div>
-                <div class="count">
-                    <div class="count increament">
-                        <button id="minus">
-                            <img src="images/icon-minus.svg" alt="">
-                        </button>
-                        <input class="inputbox" type="text" id="inputbox" readonly="" value="0">
-                        <button id="plus">
-                            <img src="images/icon-plus.svg" alt="">
-                        </button>
-                    </div>
-
-                    <div class="count addcart">
-                            <button id="addcart"><img src="images/icon-cart.svg" alt="">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
 
     <div class="cartbox" id="cartbox">
         <div class="carttitle">
             <h4>Cart</h4>
-            <button onclick="closecart()"></button>
         </div>
         <hr>
-        
+
         <div class="cartbody">
 
             <div class="empty">
@@ -144,33 +89,91 @@
 
                         <img id="deletecart" src="images/icon-delete.svg" alt="">
                     </div>
-                    
+
                 </div>
             </div>
 
             <button class="checkout">Checkout</button>
-                  
-                        
-            
+
+
+
         </div>
-        
+
     </div>
 
-    <div class="menu" id="menu">
-        
-        <img class="menuclose" src="images/icon-close.svg" alt="" onclick="closemenu()">
+    <main>
+        <div class="container maxWidth">
+            <div class="images">
+                <div class="product-1">
+                    <button class="previous" id="previous"></button>
 
-        <div style="margin-top: 100px;"></div>
-        <ul>
-            <li><a href="">Collections</a></li>
-            <li><a href="">Men</a></li>
-            <li><a href="">Women</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
+                    <img class="mainImg" id="mainImg" src="./images/image-product-1.jpg" alt="">
+
+                    <button class="next" id="next"></button>
+                </div>
+
+                <ul class="thumbnail">
+                    <li onclick="thumbchange(1)"><img src="./images/image-product-1.jpg" alt=""></li>
+
+                    <li onclick="thumbchange(2)"><img src="./images/image-product-2.jpg" alt=""></li>
+
+                    <li onclick="thumbchange(3)"><img src="./images/image-product-3.jpg" alt=""></li>
+
+                    <li onclick="thumbchange(4)"><img src="./images/image-product-4.jpg" alt=""></li>
+                </ul>
+            </div>
+
+            <div class="images">
+                <div class="text">
+                    <h3>SNEAKER COMPANY</h3>
+                    <H1 class="fall">Fall Limited Edition Sneakers</H1>
+                    <p>
+                        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber
+                        outer
+                        sole, they’ll withstand everything the weather can offer.
+                    </p>
+
+                    <div class="discountTwo">
+                        <div class="discount">
+                            <h2>$125.00</h2>
+                            <h4 class="fifty">50%</h4>
+                        </div>
+
+                        <p class="two">$250.00</p>
+                    </div>
+
+                    <div class="count">
+                        <div class="count increament">
+                            <button id="minus">
+                                <img src="images/icon-minus.svg" alt="">
+                            </button>
+
+                            <input class="inputbox" type="number" id="inputbox" value="0" min="0">
+
+                            <button id="plus">
+                                <img src="images/icon-plus.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div class="count addcart">
+                            <button id="addcart"><img src="images/icon-cart.svg" alt="">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </main>
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="#">ajayitoheeb</a>.
     </div>
 
-    
-    <script src="javascript/homepage.js"></script>
 </body>
+<script src="javascript/homepage.js"></script>
+
 </html>
